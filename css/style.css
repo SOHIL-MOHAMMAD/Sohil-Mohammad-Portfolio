@@ -1,0 +1,228 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --bg-main: #F6F4E8;
+  --bg-section: #E5EEE4;
+  --primary: #C0E1D2;
+  --accent: #DC9B9B;
+  --text-dark: #333;
+}
+
+/* Body */
+body {
+  background-color: var(--bg-main);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  width: 100%;
+}
+
+/* Navbar */
+.navbar { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  background-color: rgba(229, 238, 228, 0.8); 
+  backdrop-filter: blur(10px); 
+  
+ 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 10px;
+  width: calc(100% - 20px);
+  
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Keeps it above everything */
+}
+
+.navbar h1 {
+  font-size: 24px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.desktop-nav {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger button */
+.menu-btn {
+  display: none; /* Shown in responsive.css */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 900;
+}
+
+.menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0; /* Keep at 0, use transform to hide */
+  height: 100vh;
+  width: 290px;
+  background: var(--accent);
+  box-shadow: -10px 0 25px rgba(0,0,0,0.1);
+  padding: 80px 20px;
+  z-index: 800;
+  transform: translateX(100%); /* Start fully hidden on the right */
+  transition: transform 0.4s ease; /* Smooth slide */
+}
+
+.sidebar .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 25px;
+  font-weight: 900;
+  list-style: none;
+}
+
+.sidebar .nav-links a {
+  text-decoration: none;
+  color: var(--bg-main);
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 100px 20px; 
+  min-height: 100vh; 
+  text-align: center;
+}
+.main-content .sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.main-content .sec:last-child {
+  flex-direction: row; 
+  justify-content: center;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .main-content .sec:last-child {
+    flex-direction: column;
+  }
+}
+
+.main-content h1 {
+  font-size: 40px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.main-content h1 span {
+  color: var(--accent);
+}
+
+.main-content h2 {
+  font-size: 24px;
+  color: var(--text-dark);
+}
+
+.main-content p {
+  font-size: 18px;
+  color: var(--text-dark);
+  max-width: 600px;
+}
+
+.main-content button {
+  padding: 12px 30px;
+  font-size: 16px;
+  width: 250px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--bg-main);
+  background-color: var(--text-dark);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.main-content button:hover {
+  opacity: 0.9;
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--primary);
+  color: var(--text-dark);
+  padding: 10px 20px;
+  /* Use auto width to account for default display block behavior */
+  width: auto; 
+  /* margin-top to separate from content if needed */
+  margin-top: 20px; 
+  box-shadow: 0px -10px 20px rgba(0,0,0,0.05); /* Glow upwards */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.footer ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.footer img {
+  width: 25px;
+  height: 25px;
+}
