@@ -85,3 +85,26 @@ gsap.from(".copyright", {
   duration: 1,
   delay: 2
 });
+
+gsap.from(".skills ul li ", {
+  opacity: 0,
+  y: 20,
+  stagger: 0.1,
+  duration: 0.5,
+  delay: 1.5
+});
+
+gsap.from(".skills ", {
+  opacity: 0,
+  y: 20,
+  duration: 0.5,
+  delay: 1.1
+})
+
+
+gsap.from(".about-me", {
+  opacity: 0,
+  y: 20,
+  duration: 0.5,
+  delay: 1.2,
+});
