@@ -32,8 +32,7 @@
   /* Main Section Mobile Fixes */
   .main-content {
     padding: 40px 20px;
-    height: auto; /* Let it grow with content on mobile */
-    min-height: calc(100vh - 150px);
+    min-height: 95vh;
   }
 
   .main-content h1 {
@@ -133,6 +132,18 @@
   background-color: var(--accent);
   color: white;
 }
+.contact-main {
+    padding-top: 100px;
+    gap: 30px;
+  }
+  
+  .contact-main h1 {
+    font-size: 28px;
+  }
+  
+  .contact-main form {
+    width: 95%; /* More room on small screens */
+  }
 
 .skills img {
   width: 20px;

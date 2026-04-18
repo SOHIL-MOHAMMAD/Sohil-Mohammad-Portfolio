@@ -108,3 +108,10 @@ gsap.from(".about-me", {
   duration: 0.5,
   delay: 1.2,
 });
+
+gsap.from(".contact-main",{
+  opacity: 0,
+  y: 20,
+  duration: 0.5,
+  delay: 1.1,
+})
