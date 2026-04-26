@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sohil Portfolio</title>
+  <title>Sohil Portfolio - About</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
-
-<body>
-
-  <nav class="navbar">
-    <h1>Sohil</h1>
-
-    <ul class="desktop-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+<body class='about'> 
+  <nav class='navbar'> 
+    <h1>Sohil.</h1>
+    <ul> 
+      <li> <a href='index.html'> Home </a> </li>
+      <li> <a href='about.html' class="active"> About </a> </li>
+      <li> <a href='cybersafety.html'> Cyber Safety </a> </li>
+      <li> <a href='contact.html'> Contact </a> </li>
     </ul>
 
     <div class="menu-btn">
@@ -24,49 +22,74 @@
       <span></span>
       <span></span>
     </div>
-  </nav> <div class="sidebar">
+  </nav>
+
+  <div class="sidebar">
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="cybersafety.html">Cyber Safety</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
- 
-  <main class='about-main'>
-    <div class='about-me'>
-      <h1>About Me</h1>
-      <p> I'm a passionate frontend developer with experience in creating responsive and user-friendly websites. <br/> Also, I have a strong understanding of modern web technologies and best practices.  I'm always eager to learn and stay updated with the latest trends in web development. <br/> I'm also learning backend development to become a full-stack developer in the future.
-      </p>
-    </div>
-    <div class='skills'>
-      <h2> Skills </h2>
-      <ul>
-        <li> <div class='skill-item'> <h3> HTML </h3> <img src="images/html.png" alt="HTML Icon" /> </div> </li>
-        <li> <div class='skill-item'> <h3> CSS </h3> <img src="images/css-3.png" alt="CSS Icon" /> </div> </li>
-        <li> <div class='skill-item'> <h3> JavaScript </h3> <img src="images/js.png" alt="JavaScript Icon" /> </div> </li>
-        <li> <div class='skill-item'> <h3> React </h3> <img src="images/physics.png" alt="React Icon" /> </div> </li>
-        <li> <div class='skill-item'> <h3> Git and Github </h3> <img src="images/social.png" alt="Git Icon" /> </div> </li>
 
+  <div class='about-main'>
+    <div class='about-me'> 
+       <h1> Driven Frontend Developer </h1>
+       <p> 
+         As a passionate frontend developer, I am dedicated to creating intuitive, elegant, and impactful web applications. I focus on clean code, exceptional performance, and a user-first design approach. I thrive in dynamic environments where I can leverage my expertise in modern technologies to solve complex problems and craft visually striking interfaces.
+       </p>
     </div>
-  </main>
+    
+    <div class="skills-container">
+      <h2>Technical Expertise</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <h3>Frontend Technologies</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">HTML5 & CSS3</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
 
-  
+        <div class="skill-card">
+          <h3>Backend & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">NPM/Yarn</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Design & Other</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">UI/UX Design Principles</span>
+            <span class="skill-tag">Web Accessibility</span>
+            <span class="skill-tag">Performance Optimization</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
-    <div class="copyright"> 
-      ©️ 2026 Sohil
-    </div>
-
-    <div>
-      <ul class="icons"> 
-        <li><img src="images/instagram.png" alt="Social Icon 1" /></li>
-        <li><img src="images/email.png" alt="Social Icon 2" /></li>
-        <li><img src="images/linkedin.png" alt="Social Icon 3" /></li>
-      </ul>
+    <div class="footer-container">
+      <h1>Sohil</h1>
+      <p>Frontend Developer • Building smooth user experiences</p>
+      <p class="copyright">© 2026 Sohil. All rights reserved.</p>
     </div>
   </footer>
-
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="js/script.js"></script>
-
 </body>
 </html>
